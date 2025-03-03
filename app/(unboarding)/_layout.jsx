@@ -4,8 +4,8 @@ import { Stack } from 'expo-router'
 
 const UnboradingRoot = () => {
   return (
-    <Stack>
-      <Stack.Screen name="firstSlide" component={firstSlide} />
+    <Stack screenOptions={{headerShown: false}}>
+      <Stack.Screen name="index"/>
     </Stack>
   )
 }
