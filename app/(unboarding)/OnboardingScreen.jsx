@@ -12,6 +12,7 @@ import {
 import Swiper from "react-native-swiper";
 import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import Carousel from "react-native-reanimated-carousel";
 
 const { width, height } = Dimensions.get("window");
 
@@ -81,7 +82,7 @@ const OnboardingScreen = ({onComplete }) => {
         </View>
         <View style={styles.overlay} />
 
-        <Swiper
+        {/* <Swiper
           style={styles.wrapper}
           showsButtons={false}
           dotStyle={styles.dot}
@@ -94,7 +95,21 @@ const OnboardingScreen = ({onComplete }) => {
               <Text style={styles.description}>{slide.description}</Text>
             </View>
           ))}
-        </Swiper>
+        </Swiper> */}
+        
+<Carousel
+  width={width}
+  height={300} // or adjust as needed
+  data={slides}
+  loop={false}
+  renderItem={({ item }) => (
+    <View style={styles.slide}>
+      <Text style={styles.title}>{item.title}</Text>
+      <Text style={styles.description}>{item.description}</Text>
+    </View>
+  )}
+  pagingEnabled
+/>
         <TouchableOpacity onPress={onComplete}>
           <Text
             style={{
