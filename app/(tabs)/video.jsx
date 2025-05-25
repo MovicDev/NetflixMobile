@@ -15,7 +15,7 @@ import axios from "axios";
 import { WebView } from "react-native-webview";
 import { Ionicons } from "@expo/vector-icons";
 
-const API_KEY = "AIzaSyC5EIqMsYSnMY7PmlE0PmIF1R5us5hbsgI"; // Replace with your API key
+const API_KEY = "AIzaSyBk3zaWdQutI-RwLwph2zsKRq4-DO-BqIw"; 
 const SEARCH_QUERY = "movies";
 const MAX_RESULTS = 20;
 
@@ -206,11 +206,11 @@ export default function App() {
            
           </View>
         )}
-        onEndReached={loadMoreVideos} // Load more videos when scrolling to the bottom
+        onEndReached={loadMoreVideos} 
         onEndReachedThreshold={0.5}
         ListFooterComponent={
           loading ? <ActivityIndicator size="large" color="#FF0000" /> : null
-        } // Show loader
+        } 
       />
 
       {/* Video Player Modal */}
