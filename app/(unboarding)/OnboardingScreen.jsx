@@ -9,8 +9,6 @@ import {
   Platform,
   Image,
 } from "react-native";
-import Swiper from "react-native-swiper";
-import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import Carousel from "react-native-reanimated-carousel";
 
@@ -81,25 +79,9 @@ const OnboardingScreen = ({onComplete }) => {
           </View>
         </View>
         <View style={styles.overlay} />
-
-        {/* <Swiper
-          style={styles.wrapper}
-          showsButtons={false}
-          dotStyle={styles.dot}
-          activeDotStyle={styles.activeDot}
-          loop={false}
-        >
-          {slides.map((slide, index) => (
-            <View key={index} style={styles.slide}>
-              <Text style={styles.title}>{slide.title}</Text>
-              <Text style={styles.description}>{slide.description}</Text>
-            </View>
-          ))}
-        </Swiper> */}
-        
 <Carousel
   width={width}
-  height={300} // or adjust as needed
+  height={300} 
   data={slides}
   loop={false}
   renderItem={({ item }) => (
